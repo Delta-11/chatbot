@@ -1,11 +1,8 @@
-import { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Chat from './pages/Chat';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Chat from "./pages/Chat";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <BrowserRouter>
       <div>
@@ -16,4 +13,4 @@ function App() {
     </BrowserRouter>
   );
 }
-export default App
+export default App;
