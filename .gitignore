@@ -15,3 +15,5 @@ utils/*.log
 app/*.pyc
 app/__pycache__/
 app/*.log
+
+node_modules/
