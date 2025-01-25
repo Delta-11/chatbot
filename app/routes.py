@@ -27,6 +27,7 @@ async def chat(request: ChatRequest):
     Raises:
         HTTPException: Various HTTP exceptions based on the error encountered.
     """
+    print("Received request:", request)
     try:
         gptClient = GPTService()
 
@@ -37,6 +38,7 @@ async def chat(request: ChatRequest):
             chatHistory=request.chatHistory,
             maxHistoryWindow=5,
         )
+        print("Response:", response)
         return {"response": response}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
